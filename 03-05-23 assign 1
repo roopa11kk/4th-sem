@@ -1,0 +1,18 @@
+
+n = int(input())
+results = {}
+for i in range(n):
+    name, result = input().split()
+    results[name] = result
+
+
+names = []
+for i in range(n):
+    names.append(input())
+
+
+for name in names:
+    if name in results:
+        print(f"{name} {results[name]} the exam")
+    else:
+        print("No Result Found")
