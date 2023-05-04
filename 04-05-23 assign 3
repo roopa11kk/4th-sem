@@ -1,0 +1,14 @@
+class fibonacci:
+    def __init__ (self,n):
+        self.n=n
+         
+        
+    def series(self):
+        a,b=0,1
+        for i in range(self.n):
+            yield a
+            a,b=b,a+b
+n=int(input("Enter the number of fibonacci numbers to print: "))
+fib=fibonacci(n)
+for num in fib.series():
+    print(num)
