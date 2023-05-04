@@ -1,0 +1,10 @@
+class palindrome:
+    def palindrome(self,n):
+        if s[::-1]==temp:
+            print('palindrome',end=' ')
+        else:
+            print('not palindrome',end=' ')
+s=input()
+temp=s
+na=palindrome()
+na.palindrome(s)
