@@ -1,0 +1,9 @@
+class leapyear:
+    def leapyear(self,n):
+        if n%400==0:
+            print('leap year',end=' ')
+        else:
+            print('Not leap year',end=' ')
+n=int(input())
+na=leapyear()
+na.leapyear(n)
