@@ -1,0 +1,19 @@
+import math
+
+def sum_of_primes(n):
+    primes = []
+    seive = [True] * (n**2)
+    for i in range(2, int(math.sqrt(len(seive)))+1):
+        if seive[i]:
+            for j in range(i*i, len(seive), i):
+                seive[j] = False
+    for i in range(2, len(seive)):
+        if seive[i]:
+            primes.append(i)
+            if len(primes) == n:
+                break
+    return sum(primes)
+
+n = int(input("Enter the value of n: "))
+sum_of_n_primes = sum_of_primes(n)
+print("The sum of first", n, "prime numbers is:", sum_of_n_primes)
