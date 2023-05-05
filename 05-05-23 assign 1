@@ -1,0 +1,14 @@
+import math
+
+n = int(input("Enter the value of n: "))
+seive = [True] * (n+1)
+
+for i in range(2, int(math.sqrt(n))+1):
+    if seive[i]:
+        for j in range(i*i, n+1, i):
+            seive[j] = False
+
+print("Prime numbers from 1 to", n, "are:")
+for i in range(2, n+1):
+    if seive[i]:
+        print(i, end=' ')
