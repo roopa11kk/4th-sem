@@ -1,0 +1,19 @@
+import math
+
+def count_primes(n):
+    seive = [True] * (n+1)
+    seive[0] = False
+    seive[1] = False
+    for i in range(2, int(math.sqrt(n))+1):
+        if seive[i]:
+            for j in range(i*i, n+1, i):
+                seive[j] = False
+    count = 0
+    for i in range(2, n+1):
+        if seive[i]:
+            count += 1
+    return count
+
+n = int(input("Enter the value of n: "))
+count = count_primes(n)
+print("There are", count, "prime numbers from 1 to", n)
